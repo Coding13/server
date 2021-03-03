@@ -598,7 +598,7 @@ void handle_connections_win()
   int n_waits;
 
   create_shutdown_event();
-  wait_events[SHUTDOWN_IDX]= hEventShutdown;
+  wait_events.push_back(hEventShutdown);
   n_waits= 1;
 
   for (int i= 0; i < all_listeners.size(); i++)
